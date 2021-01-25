@@ -23,7 +23,7 @@ mv-storage="logentry.json" >
 
   <div class="migraines">
 		<!-- <div class="since">[duration(first(date) - $today)] since last migraine!</div> -->
-		<article property="LogEntry" id="migraine-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
+		<article property="LogEntry" id="LogEntry-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
 			<header>
 				<span property="weekday">[weekday(date, "name")]</span>
 				<time property="date" mv-default="[$today]"></time>
@@ -35,7 +35,7 @@ mv-storage="logentry.json" >
 				<div property="person" mv-attribute="content" mv-edit="#personSelect"></div>
 
 			</header>
-			<div property="notes"></div>
+			<div property="Entry"></div>
 		</article>
 	</div>
 </main>
