@@ -2,17 +2,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Happiness Tracker</title>
-	<link rel="shortcut icon" href="http://projects.verou.me/mygraine/favicon.svg">
+
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="home.css">
 </head>
-<body mv-app="Happiness Log" mv-storage="https://github.com/yoswagenmans/MavoTesting/blob/main/trackingsite/logentry.json">
+<body mv-app="Happiness Log" mv-source="https://github.com/yoswagenmans/MavoTesting/blob/main/trackingsite/logentry.json"
+mv-storage="https://docs.google.com/spreadsheets/d/1dL5K5-M2k2RkDKRDr_nigYMjCMu71F0pfgHb5XP3jFU/edit?usp=sharing"
+mv-storage-sheet="Sheet2" >
 <!--mv-storage="migraines.json" >
 mv-storage="logentry.json" >
-  mv-storage="https://docs.google.com/spreadsheets/d/1dL5K5-M2k2RkDKRDr_nigYMjCMu71F0pfgHb5XP3jFU/edit?usp=sharing"
-  mv-storage-sheet="Dailylog" > -->
+-->
 <header>
 	<h2>Happiness Tracker</h2>
 	<div class="mv-bar mv-ui">
@@ -23,10 +24,11 @@ mv-storage="logentry.json" >
 
   <div class="DailyLog">
 		<!-- <div class="since">[duration(first(date) - $today)] since last migraine!</div> -->
-		<article property="LogEntry" id="LogEntry-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
+		<article property="LogEntry" id="LogEntry-[date]]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
 			<header>
-				<span property="weekday">[weekday(date, "name")]</span>
 				<time property="date" mv-default="[$today]"></time>
+				<span property="weekday">[weekday(date, "name")]</span>
+
         <div class = "ratingbar">
          Happiness  <meter property="rating" min="0" max="20" mv-edit-step="1" mv-default="10" title="Overall Happiness: [rating]"></meter>
           [rating]
@@ -36,7 +38,7 @@ mv-storage="logentry.json" >
 
 			</header>
 			<div property="Entry"></div>
-		</article>
+	</article>
 	</div>
 </main>
 

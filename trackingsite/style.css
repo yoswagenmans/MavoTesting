@@ -5,7 +5,7 @@
 body {
 	margin: 0;
 	font-family: Helvetica Neue, Segoe UI, sans-serif;
-	--gradient: linear-gradient(to bottom right, hsl(80, 100%, 40%), hsl(60, 100%, 40%))
+	--gradient: linear-gradient(to bottom right, hsl(80, 100%, 40%), hsl(60, 80%, 40%))
 }
 
 main,
@@ -14,7 +14,7 @@ aside {
 }
 
 .ratingbar{
-  margin-left:4em
+  margin-left:2em
 }
 
 body > header {

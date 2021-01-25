@@ -36,7 +36,7 @@
 	[property="weekday"] {
 		min-width: 2em;
 		text-align: right;
-		margin-right: .6ch;
+		margin-left: .6ch;
 	}
 
 	[property="Entry"] {
