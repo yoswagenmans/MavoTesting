@@ -1,10 +1,8 @@
 {
-	"migraine": [
+	"LogEntry": [
 		{
 			"date": "2020-11-22",
-			"startTime": "16:00",
-			"duration": 5,
-			"intensity": 4
+			"rating": 5
 		},
 		{
 			"date": "2020-11-20",

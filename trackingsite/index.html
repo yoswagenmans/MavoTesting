@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="home.css">
 </head>
-<body mv-app="migraines" mv-storage="https://github.com/leaverou/mygraine/data.json">
+<body mv-app="Happiness Log" mv-storage="https://github.com/yoswagenmans/MavoTesting/blob/main/trackingsite/logentry.json">
 <!--mv-storage="migraines.json" >
 mv-storage="logentry.json" >
   mv-storage="https://docs.google.com/spreadsheets/d/1dL5K5-M2k2RkDKRDr_nigYMjCMu71F0pfgHb5XP3jFU/edit?usp=sharing"
@@ -23,7 +23,7 @@ mv-storage="logentry.json" >
 
   <div class="migraines">
 		<!-- <div class="since">[duration(first(date) - $today)] since last migraine!</div> -->
-		<article property="migraine" id="migraine-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
+		<article property="LogEntry" id="migraine-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
 			<header>
 				<span property="weekday">[weekday(date, "name")]</span>
 				<time property="date" mv-default="[$today]"></time>
