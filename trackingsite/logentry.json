@@ -2,13 +2,13 @@
 	"LogEntry": [
 		{
 			"date": "2020-11-22",
-			"rating": 15
+			"rating": 15,
 			"Entry": "I got free ice cream today"
 		},
 		{
 			"date": "2020-11-20",
-			"rating": 11
-			"Entry" : "Nunc sodales sapien sem, sed laoreet nibh congue condimentum. Pellentesque quis sagittis massa. Proin at hendrerit dolor, eget venenatis leo. Donec ultrices est vel diam tempor, et pulvinar lorem condimentum. Quisque vehicula aliquam tortor eget lobortis. Donec dui urna, rhoncus non pretium in, suscipit sed felis. Ut posuere aliquet diam in condimentum. Nullam at nibh nunc. Sed nisi lacus, tempor in fermentum id, maximus at mi. Nunc sodales vitae dolor et tincidunt. Donec ornare orci ac urna lacinia, vitae ultrices justo viverra. Aliquam malesuada vestibulum volutpat."
+			"rating": 11,
+			"Entry": "Nunc sodales sapien sem, sed laoreet nibh congue condimentum. Pellentesque quis sagittis massa. Proin at hendrerit dolor, eget venenatis leo. Donec ultrices est vel diam tempor, et pulvinar lorem condimentum. Quisque vehicula aliquam tortor eget lobortis. Donec dui urna, rhoncus non pretium in, suscipit sed felis. Ut posuere aliquet diam in condimentum. Nullam at nibh nunc. Sed nisi lacus, tempor in fermentum id, maximus at mi. Nunc sodales vitae dolor et tincidunt. Donec ornare orci ac urna lacinia, vitae ultrices justo viverra. Aliquam malesuada vestibulum volutpat."
 		},
 		{
 			"date": "2020-08-26",
