@@ -1,0 +1,139 @@
+
+main {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
+@media (max-width: 900px) {
+	main {
+		grid-template-columns: 1fr;
+	}
+}
+
+.recent-migraines {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-gap: .2em;
+}
+
+	.recent-migraines > div {
+		color: hsl(var(--gray), 50%);
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.recent-migraines > a {
+		border-radius: .2em;
+		--hue: calc(30 - 6 * var(--intensity, 2.5));
+		--lightness: calc(70% - var(--intensity, 2.5) * 10%);
+		--color: hsl(var(--hue), 100%, var(--lightness));
+
+		--spillover-hue: calc(30 - 6 * var(--spillover-intensity, 2.5));
+		--spillover-lightness: calc(70% - var(--spillover-intensity, 2.5) * 10%);
+		--spillover-color: hsl(var(--hue), 100%, var(--spillover-lightness));
+		/* --no-intensity: linear-gradient(to right, hsl(12, 100%, 40%), hsl(30, 100%, 70%)); */
+		background: var(--color, var(--no-intensity));
+		color: white;
+		font-weight: bold;
+		padding: .3em .5em;
+		text-decoration: none;
+	}
+
+	.recent-migraines > a:not(.migraine) {
+		background: hsl(var(--gray), 70%);
+		cursor: not-allowed;
+	}
+
+	.recent-migraines.by-duration > a {
+		background:
+			linear-gradient(to right, var(--spillover-color) calc(100% * var(--spillover, 0) / 24), transparent 0),
+			var(--migraine-gradient, ) hsl(var(--gray), 70%);
+	}
+
+	.recent-migraines.by-duration > a.has-duration {
+		--migraine-gradient: linear-gradient(to right,
+			transparent 0 calc(100% * var(--start, 0) / 24),
+			var(--color) 0 calc(100% * (var(--start, 0) + var(--duration)) / 24),
+			transparent 0
+		);
+	}
+
+	.recent-migraines.by-duration > a.migraine:not(.has-duration) {
+		--stripe: .5em;
+		--percent: calc(var(--average-duration) / 24);
+		--migraine-gradient: repeating-linear-gradient(-45deg, var(--color, hsl(21, 100%, 55%)) 0 calc(var(--stripe) * var(--percent)), hsl(var(--gray), 70%) 0 var(--stripe));
+	}
+
+dl.stats {
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+
+	dl.stats dt,
+	dl.stats dd {
+		padding: .2em .3em;
+		border: 1px solid rgba(0,0,0,.1);
+		border-bottom: 0;
+		border-right: 0;
+		box-shadow: 0 1px rgba(0,0,0,.1), 1px 0 rgba(0,0,0,.1);
+	}
+
+	dl.stats dt {
+		grid-column: 1;
+		background: hsl(var(--color, var(--gray)), 95%);
+	}
+
+	dl.stats dd {
+		grid-column: 2;
+		margin: 0;
+	}
+
+	dl.stats dt.large,
+	dl.stats dt.large + dd {
+		grid-column: 1;
+		grid-column-end: span 2;
+	}
+
+	dl.stats dt.large {
+		margin-top: .5em;
+	}
+
+	dl.stats dt.large + dd {
+		padding: .8em;
+	}
+
+	dl.stats dt:not(.large) + dd {
+		font-weight: bold;
+	}
+
+[property="migraineByMonth"],
+.migraines-by-intensity > div {
+	display: grid;
+	grid-gap: .3em;
+	margin: .3em 0;
+}
+
+[property="migraineByMonth"] {
+	text-align: right;
+	grid-template-columns: 8em 1fr 10em;
+}
+
+.migraines-by-intensity > div {
+	grid-template-columns: auto auto 1fr auto;
+}
+
+	[property="monthlyCount"] {
+		grid-column: 3;
+		width: calc(100% * var(--width));
+		padding: .1em .3em;
+		box-sizing: border-box;
+		background: var(--gradient);
+		color: white;
+		font-size: 80%;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	.migraines-by-intensity meter {
+		grid-column: 4;
+	}
