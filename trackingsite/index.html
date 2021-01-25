@@ -23,7 +23,7 @@ mv-storage="logentry.json" >
 
   <div class="migraines">
 		<!-- <div class="since">[duration(first(date) - $today)] since last migraine!</div> -->
-		<article property="LogEntry" id="LogEntry-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
+		<article property="migraine" id="migraine-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
 			<header>
 				<span property="weekday">[weekday(date, "name")]</span>
 				<time property="date" mv-default="[$today]"></time>
@@ -47,21 +47,7 @@ mv-storage="logentry.json" >
 		<option>Person 3</option>
 	</select>
 </div>
-<script>
-	function intensityName(intensity) {
-		return ["Very mild", "Mild", "Medium", "Strong", "Very strong"][intensity - 1];
-	}
 
-	function timeOfDay2(hour) {
-		hour = Mavo.value(hour);
-
-		if (hour === "" || hour === null) {
-			return null;
-		}
-debugger;
-		return ["Early morning", "Morning", "Afternoon", "Evening"][Math.floor(hour / 6)]
-	}
-</script>
 <script src="https://dev.mavo.io/dist/mavo.js"></script>
 
 </body>
