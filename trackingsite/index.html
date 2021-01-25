@@ -1,0 +1,68 @@
+<html lang="en" class="home">
+<head>
+	<meta charset="UTF-8">
+	<title>Happiness Tracker</title>
+	<link rel="shortcut icon" href="http://projects.verou.me/mygraine/favicon.svg">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="home.css">
+</head>
+<body mv-app="migraines" mv-storage="https://github.com/leaverou/mygraine/data.json">
+<!--mv-storage="migraines.json" >
+mv-storage="logentry.json" >
+  mv-storage="https://docs.google.com/spreadsheets/d/1dL5K5-M2k2RkDKRDr_nigYMjCMu71F0pfgHb5XP3jFU/edit?usp=sharing"
+  mv-storage-sheet="Dailylog" > -->
+<header>
+	<h2>Happiness Tracker</h2>
+	<div class="mv-bar mv-ui">
+		<a href="stats.html[location.search]" class="mv-button stats">Stats</a>
+	</div>
+</header>
+<main>
+
+  <div class="migraines">
+		<!-- <div class="since">[duration(first(date) - $today)] since last migraine!</div> -->
+		<article property="migraine" id="migraine-[date]-[startTime]" mv-multiple mv-order="desc" style="--intensity:[intensity];">
+			<header>
+				<span property="weekday">[weekday(date, "name")]</span>
+				<time property="date" mv-default="[$today]"></time>
+        <div class = "ratingbar">
+         Happiness  <meter property="rating" min="0" max="20" mv-edit-step="1" mv-default="10" title="Overall Happiness: [rating]"></meter>
+          [rating]
+        </div>
+
+				<div property="person" mv-attribute="content" mv-edit="#personSelect"></div>
+
+			</header>
+			<div property="notes"></div>
+		</article>
+	</div>
+</main>
+
+<div hidden>
+	<select id="personSelect">
+		<option>Person 1</option>
+		<option>Person 2</option>
+		<option>Person 3</option>
+	</select>
+</div>
+<script>
+	function intensityName(intensity) {
+		return ["Very mild", "Mild", "Medium", "Strong", "Very strong"][intensity - 1];
+	}
+
+	function timeOfDay2(hour) {
+		hour = Mavo.value(hour);
+
+		if (hour === "" || hour === null) {
+			return null;
+		}
+debugger;
+		return ["Early morning", "Morning", "Afternoon", "Evening"][Math.floor(hour / 6)]
+	}
+</script>
+<script src="https://dev.mavo.io/dist/mavo.js"></script>
+
+</body>
+</html>

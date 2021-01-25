@@ -1,0 +1,21 @@
+{
+	"migraine": [
+		{
+			"date": "2020-11-22",
+			"startTime": "16:00",
+			"duration": 5,
+			"intensity": 4
+		},
+		{
+			"date": "2020-11-20",
+			"startTime": "10:00",
+			"duration": 5,
+			"intensity": 3
+		},
+		{
+			"date": "2020-08-26",
+			"rating": 12,
+			"notes": "Sample migraine"
+		}
+	]
+}

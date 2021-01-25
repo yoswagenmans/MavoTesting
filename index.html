@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" data-files=" img/bg.jpg">
+
+<head>
+
+    <title>To-Do List App</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" shrink-to-fit="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="To-do List App" />
+    <meta property="og:description" content="To-do List" />
+    <meta name="author" content="yos wagenmans">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="img/favi.ico">
+
+    <!--Mavo Stylesheets-->
+    <link rel="stylesheet" href="https://dev.mavo.io/dist/mavo.css">
+    <script src="https://dev.mavo.io/dist/mavo.js"></script>
+
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Custom Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+
+
+</head>
+
+<div mv-app="Happinesslog" mv-plugins="gsheets"
+        mv-storage="https://docs.google.com/spreadsheets/d/1dL5K5-M2k2RkDKRDr_nigYMjCMu71F0pfgHb5XP3jFU/edit?usp=sharing"
+        mv-storage-sheet="Todos">
+
+    <h2>Happiness Log</h2>
+    <p mv-multiple="todo">
+        <label>
+            <input type="checkbox" property="done" />
+            <span property="taskTitle"></span>
+        </label>
+    </p>
+</div>
+</html>
