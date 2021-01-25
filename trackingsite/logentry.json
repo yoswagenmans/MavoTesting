@@ -2,20 +2,20 @@
 	"LogEntry": [
 		{
 			"date": "2021-01-25",
-			"rating": 10,
-			"person": "Person 1"
+			"rating": 17,
+			"person": "Person 2"
 		},
 		{
 			"date": "2021-01-25",
 			"rating": 10,
-			"person": "Person 1",
+			"person": "Person 2",
 			"Entry": "fsdfdf"
 		},
 		{
 			"date": "2020-11-22",
 			"rating": 15,
 			"Entry": "I got free ice cream today",
-			"person": "Person 1"
+			"person": "Person 2"
 		},
 		{
 			"date": "2020-11-20",
