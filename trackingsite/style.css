@@ -112,34 +112,9 @@ meter::-webkit-meter-bar {
 		display: flex;
 		gap: .1em;
 		margin-left: .5em;
-		color: white;
+		color: black;
 		font-weight: bold;
 		font-size: 70%;
 	}
 
-	[property="person"]::before,
-	[property="person"]::after{
-		width: 5em;
-		height: 1em;
-		padding: .3em .4em .5em;
-		--color: var(--hue), 70%;
-		background: hsl(var(--color, var(--gray)), var(--lightness, 80%));
-		border-radius: .2em;
-		text-align: center;
-	}
-
-	[property="person"]::before {
-		content: "Person 1";
-		/*border-top-left-radius: 1em;*/
-	}
-
-	[property="person"]::after {
-		content: "Person 2";
-	/*border-top-right-radius: 1em; */
-	}
-
-	[property="person"][content="Person 1"]::before,
-	[property="person"][content="Person 2"]::after
-   {
-		--lightness: 50%;
-	}
+\

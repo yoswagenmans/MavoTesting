@@ -9,8 +9,8 @@
 
 [property="LogEntry"] {
 	margin: .5em;
-	--hue: calc(30 * (1 - var(--intensity) * .25));
-	--color: var(--hue), 100%;
+	/*--hue: calc(30 * (1 - var(--intensity) * .25));
+	--color: var(--hue), 50%;*/
 	background: hsl(var(--color, var(--gray)), 90%);
 	border-radius: 4px;
 }
@@ -45,5 +45,8 @@
 	}
 
 [property="rating"] {
+	margin-left: .4em;
+}
+[property="person"] {
 	margin-left: .4em;
 }
